@@ -32,7 +32,7 @@ d3.json("publishing.json").then(data => {
         .selectAll("circle")
         .data(data.nodes)
         .enter().append("circle")
-        .attr("r", d => Math.sqrt(d.attributes.size))
+        .attr("r", d => Math.sqrt(d.attributes.size)*2)
         .attr("fill", d => d.attributes.color)
         .call(d3.drag()
             .on("start", dragStarted)
